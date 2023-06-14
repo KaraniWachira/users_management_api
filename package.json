@@ -1,0 +1,17 @@
+{
+  "name": "user_management_api",
+  "version": "1.0.0",
+  "description": "the api manages user registration, their role and previlages",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon server.js"
+  },
+  "author": "karani keith",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.1.0",
+    "ejs": "^3.1.9",
+    "express": "^4.18.2",
+    "nodemon": "^2.0.22"
+  }
+}
