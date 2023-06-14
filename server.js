@@ -15,13 +15,14 @@ app.get('/users', (req, res) => {
     res.json(users);
 });
 
+// route to add a user
 app.post('/users', async (req, res) => {
     // add salt to the beginning of our password the hash it
     // this ensure security of our password because salt is different for everys single user
     try {
         const hashedPassword = await bcrypt.hash(req.body.password, 10); //generate salt 
-        // console.log(salt);
-        // console.log(hashedPassword);
+        console.log(salt);
+        console.log(hashedPassword);
 
         const user = { name: req.body.name, password: hashedPassword }
         users.push(user)
@@ -49,15 +50,7 @@ app.post('/users/login', async(req, res) => {
     } catch (error) {
         res.status(500).send()
     }
-  
-
 })
-
-
-
-
-
-
 
 
 // port that server will run on.
